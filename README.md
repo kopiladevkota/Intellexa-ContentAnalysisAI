@@ -1,2 +1,2 @@
 Intellexa_ A content Analysis AI
-Please revie defense report for more info
+Please review defense report10 for more info
