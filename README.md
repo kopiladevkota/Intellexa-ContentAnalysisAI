@@ -1,10 +1,13 @@
 Intellexa: Multi-Format Content Analysis AI
+
+
 Project Overview
 Intellexa is an advanced Retrieval-Augmented Generation (RAG) application designed to deliver intelligent, context-aware analysis of diverse digital content formats. It leverages a self-hosted vector database (Chroma) for efficient knowledge retrieval, external Large Language Models (Groq's Llama-3.3-70b) for rapid inference, and a modern, interactive user interface built with Streamlit.
 
 This project demonstrates expertise in combining modern AI orchestration (LangGraph, multi-format processing) with full-stack development to solve real-world information fragmentation challenges.
 
 Key Technical Highlights ✨
+
 Multi-Source RAG Architecture: Implements sophisticated RAG pipelines for YouTube videos, research papers, PDF documents, and web content with specialized processing for each format.
 
 Intelligent Query Routing: Uses LangGraph state machines with multi-layer classification (regex patterns, keyword analysis, LLM intent detection) to route queries to appropriate handlers.
@@ -90,26 +93,28 @@ backend.py - AI Orchestration & Workflows
 This file contains the core intelligence of the system:
 
 Component	Description
-State Management	State(TypedDict) class manages conversation history, audio preferences, and current content source
-Query Routing	enhanced_route_query() uses multi-layer classification (content source → regex → keywords → LLM)
-Specialized Handlers	handle_video_qa(), handle_web_content(), handle_general_query() process different query types
-RAG Implementation	ChromaDB retrievers with MMR search for diverse, relevant context retrieval
+
+State Management : State(TypedDict) class manages conversation history, audio preferences, and current content source
+Query Routing :	enhanced_route_query() uses multi-layer classification (content source → regex → keywords → LLM)
+Specialized Handlers : handle_video_qa(), handle_web_content(), handle_general_query() process different query types
+RAG Implementation	: ChromaDB retrievers with MMR search for diverse, relevant context retrieval
 web_loader.py - Multi-Format Content Processing
 Universal content processor with intelligent format detection:
 
 Function	Description
-process_url(url)	Main entry point that auto-detects content type and routes to appropriate processor
-_detect_content_type()	Identifies PDF, arXiv, news, or general webpage from URL patterns
-_process_pdf()	Extracts text with page-level metadata using PyPDF2
-_process_arxiv()	Fetches research paper metadata and abstracts via arXiv API
-_process_news()	Uses newspaper3k for clean article extraction with NLP features
-_process_webpage()	Implements fallback strategy (trafilatura → BeautifulSoup)
-frontend.py - User Interface & Interaction
-Modern Streamlit interface with advanced features:
 
-Feature	Implementation
-Content Loading	Sidebar interface for YouTube and web URLs with language selection
-Voice Input	speech_to_text() integration for hands-free questioning
-Audio Output	Edge-TTS generation with auto-play based on user preference
-Session Management	Persistent conversation history and content state across interactions
+process_url(url) :	Main entry point that auto-detects content type and routes to appropriate processor
+
+_detect_content_type() :	Identifies PDF, arXiv, news, or general webpage from URL patterns
+
+_process_pdf()	: Extracts text with page-level metadata using PyPDF2
+
+_process_arxiv() : Fetches research paper metadata and abstracts via arXiv API
+
+_process_news() :	Uses newspaper3k for clean article extraction with NLP features
+
+_process_webpage() :	Implements fallback strategy (trafilatura → BeautifulSoup)
+
+frontend.py - User Interface & Interaction
+Modern Streamlit interface with advanced features
 
