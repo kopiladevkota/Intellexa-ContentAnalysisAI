@@ -96,7 +96,7 @@ python -m venv venv
 
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+
 
 pip install -r requirements.txt
 
@@ -162,4 +162,18 @@ _process_webpage() :	Implements fallback strategy (trafilatura → BeautifulSoup
 frontend.py - User Interface & Interaction
 
 Modern Streamlit interface with advanced features
+
+
+Output:
+
+<img width="1592" height="958" alt="Screenshot 2025-11-11 121943" src="https://github.com/user-attachments/assets/cef029b6-3e36-4e23-b7e8-161237acd3e0" />
+
+<img width="1541" height="920" alt="Screenshot 2025-11-11 123054" src="https://github.com/user-attachments/assets/3d1cd4c1-c44a-4674-a406-152616930aa8" />
+
+<img width="1430" height="896" alt="Screenshot 2025-11-11 123436" src="https://github.com/user-attachments/assets/12c6e1ce-4e2a-44db-9450-e1ce6a5c28b7" />
+
+<img width="1437" height="961" alt="Screenshot 2025-11-11 123744" src="https://github.com/user-attachments/assets/b9a3bd5a-6f53-4255-ad76-521d072ca47b" />
+
+
+
 
